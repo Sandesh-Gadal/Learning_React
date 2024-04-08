@@ -14,11 +14,17 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path ='/useeffect' element ={<Useeffect/>}/>
         <Route path= '*' element={<h1>page not found</h1>}/>
+
+
+        {/* nexted route */}
         <Route path = "/dashboard">
           <Route index element={"dashboard"}/>
              <Route path='analytics' element={"Dasboard analyticd"}/>
              <Route path='change-password' element={"Change passowrd"}/>
           </Route>
+
+          {/* dynamic routes */}
+          <Route path="posts/:id"element={<Post/>}/>
       </Routes>
      </BrowserRouter>
   )
