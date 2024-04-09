@@ -3,8 +3,13 @@ import {useNavigate } from 'react-router-dom'
 const Contact = () => {
   const navigate = useNavigate()
 
-  use
-  return (
+  useEffect(()=>{
+    if(true){
+   navigate("/about")
+    }
+  })
+  
+  return(
     <div>Contact</div>
   )
 }

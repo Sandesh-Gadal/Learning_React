@@ -25,7 +25,8 @@ function App() {
           </Route> */}
  
           {/* dynamic routes */}
-          <Route path='/' element={<Contact/>}/>
+          <Route path='/about' element={<h1>This is About Page</h1>}/>
+          <Route path='/contact' element={<Contact/>}/>
          <Route path='/posts/:id' element={<Posts/>}/>
       </Routes>
      </BrowserRouter>
