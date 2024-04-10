@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import {Outlet} from 'react-router-dom'
+
 
 const Home = () => {
 //  console.log(useState({
@@ -28,9 +30,17 @@ const decreasecount = ()=>{
 
   return (
     <div>
-      <h1>{number}</h1>
+      {/* <h1>{number}</h1>
       <button onClick={increasecount}>+</button>
-      <button onClick={decreasecount}>-</button>
+      <button onClick={decreasecount}>-</button> */}
+
+      Home Page 
+      <br/>
+      Navbar
+      <br/>
+    
+
+     <Outlet/>
     </div>
     
   )
