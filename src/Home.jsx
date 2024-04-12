@@ -29,11 +29,16 @@ const decreasecount = ()=>{
 }
 
 
-const [liked ,setLiked] = useState(true)
+const [liked,setLiked] = useState(true)
 
 function handlechange(e){
   setLiked(e.target.checked)
 }
+
+const [age ,setAge]= useState(42)
+const [name ,setName] = useState('sandesh')
+
+
   return (
     <>
       {/* <h1>{number}</h1>
@@ -49,15 +54,20 @@ function handlechange(e){
      <Outlet/> */}
 
       
-      <label>
+      {/* <label>
         <input 
         type='checkbox'
         checked={liked}
         onChange={handlechange}
         /> i liked this
       </label>
-       <p> You {liked ? 'liked': 'did not like'} this </p>
-
+       <p> You {liked ? 'liked': 'did not like'} this </p> */}
+       
+   <input value={name} onChange={e=>{setName(e.target.value)}}/>
+    <br/> 
+    <button onClick={()=>setAge(age+1)}>Increase age</button>  
+     <button onClick={()=>setAge(age-1)}>Decrease age</button>
+     <p>you are {name}.Your age is {age}</p>  
     </>
     
   )
