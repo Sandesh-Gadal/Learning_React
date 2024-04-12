@@ -28,20 +28,37 @@ const decreasecount = ()=>{
  setNumber(number-1)
 }
 
+
+const [liked ,setLiked] = useState(true)
+
+function handlechange(e){
+  setLiked(e.target.checked)
+}
   return (
-    <div>
+    <>
       {/* <h1>{number}</h1>
       <button onClick={increasecount}>+</button>
       <button onClick={decreasecount}>-</button> */}
 
-      Home Page 
+      {/* Home Page 
       <br/>
       Navbar
       <br/>
     
 
-     <Outlet/>
-    </div>
+     <Outlet/> */}
+
+      
+      <label>
+        <input 
+        type='checkbox'
+        checked={liked}
+        onChange={handlechange}
+        /> i liked this
+      </label>
+       <p> You {liked ? 'liked': 'did not like'} this </p>
+
+    </>
     
   )
 }
